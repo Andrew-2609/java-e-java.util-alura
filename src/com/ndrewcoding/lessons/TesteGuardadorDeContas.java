@@ -1,6 +1,7 @@
 package com.ndrewcoding.lessons;
 
 import com.ndrewcoding.models.GuardadorDeContas;
+import models.Conta;
 import models.ContaCorrente;
 import models.ContaPoupanca;
 
@@ -19,8 +20,10 @@ public class TesteGuardadorDeContas {
         guardadorDeContas.guardar(contaPoupanca);
 
         int tamanhoAtualDoGuardador = guardadorDeContas.getQuantidadeDeElementos();
+        System.out.println("Tamanho atual do Guardador: " + tamanhoAtualDoGuardador);
 
-        System.out.println(tamanhoAtualDoGuardador);
+        Conta ref = guardadorDeContas.getReferenciaNaPosicao(0);
+        System.out.println(ref);
 
     }
 }

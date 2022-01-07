@@ -21,4 +21,8 @@ public class GuardadorDeContas {
         return this.posicaoLivre;
     }
 
+    public Conta getReferenciaNaPosicao(int posicao) {
+        return this.referencias[posicao];
+    }
+
 }
