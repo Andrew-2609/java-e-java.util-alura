@@ -11,17 +11,14 @@ public class TesteJavaUtilEquals {
 
         ArrayList<Conta> listaDeContas = new ArrayList<>(2);
 
-        ContaCorrente contaCorrente = new ContaCorrente(123, 321);
-        contaCorrente.depositar(1000.0);
-        listaDeContas.add(contaCorrente);
+        ContaCorrente cc1 = new ContaCorrente(123, 321);
+        ContaCorrente cc2 = new ContaCorrente(123, 322);
+        ContaCorrente cc3 = new ContaCorrente(123, 321);
 
-        ContaPoupanca contaPoupanca = new ContaPoupanca(456, 654);
-        contaPoupanca.depositar(2000.0);
-        listaDeContas.add(contaPoupanca);
+        listaDeContas.add(cc1);
+        listaDeContas.add(cc2);
 
-        for (Conta conta : listaDeContas) {
-            System.out.println(conta);
-        }
+        System.out.println("A conta 'cc3' é a mesma conta 'cc1'? Resposta: " + listaDeContas.contains(cc3));
 
     }
 }
