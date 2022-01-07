@@ -18,5 +18,9 @@ public class TesteGuardadorDeContas {
         guardadorDeContas.guardar(contaCorrente);
         guardadorDeContas.guardar(contaPoupanca);
 
+        int tamanhoAtualDoGuardador = guardadorDeContas.getQuantidadeDeElementos();
+
+        System.out.println(tamanhoAtualDoGuardador);
+
     }
 }

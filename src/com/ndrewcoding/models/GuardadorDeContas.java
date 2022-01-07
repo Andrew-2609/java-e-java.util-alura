@@ -17,4 +17,8 @@ public class GuardadorDeContas {
         this.posicaoLivre++;
     }
 
+    public int getQuantidadeDeElementos() {
+        return this.posicaoLivre;
+    }
+
 }
