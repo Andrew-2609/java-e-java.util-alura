@@ -34,8 +34,8 @@ public class TesteJavaUtil {
 
         System.out.println("-----");
 
-        for (Object obj : listaDeContas) {
-            System.out.println(obj);
+        for (Conta conta : listaDeContas) {
+            System.out.println(conta);
         }
 
     }
