@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class TesteJavaUtil {
     public static void main(String[] args) {
 
-        ArrayList lista = new ArrayList();
+        ArrayList<Conta> lista = new ArrayList<>();
 
         ContaCorrente contaCorrente = new ContaCorrente(123, 321);
         contaCorrente.depositar(1000.0);
@@ -23,7 +23,7 @@ public class TesteJavaUtil {
 
         System.out.println("Tamanho atual da lista: " + lista.size());
 
-        Conta ref = (Conta) lista.get(0);
+        Conta ref = lista.get(0);
         System.out.println(ref);
 
         lista.remove(1);
