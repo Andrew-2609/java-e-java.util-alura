@@ -39,7 +39,7 @@ public class TesteOrdenandoListas {
 class ComparadorDeContas implements Comparator<Conta> {
 
     @Override
-    public int compare(Conta primeiraConta, Conta SegundaConta) {
+    public int compare(Conta primeiraConta, Conta segundaConta) {
         return 0;
     }
 
