@@ -5,6 +5,7 @@ import models.ContaCorrente;
 import models.ContaPoupanca;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class TesteOrdenandoListas {
@@ -33,4 +34,13 @@ public class TesteOrdenandoListas {
         }
 
     }
+}
+
+class ComparadorDeContas implements Comparator<Conta> {
+
+    @Override
+    public int compare(Conta primeiraConta, Conta SegundaConta) {
+        return 0;
+    }
+
 }
