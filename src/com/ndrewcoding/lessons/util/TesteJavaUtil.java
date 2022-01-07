@@ -9,32 +9,32 @@ import java.util.ArrayList;
 public class TesteJavaUtil {
     public static void main(String[] args) {
 
-        ArrayList<Conta> lista = new ArrayList<>();
+        ArrayList<Conta> listaDeContas = new ArrayList<>();
 
         ContaCorrente contaCorrente = new ContaCorrente(123, 321);
         contaCorrente.depositar(1000.0);
 
-        lista.add(contaCorrente);
+        listaDeContas.add(contaCorrente);
 
         ContaPoupanca contaPoupanca = new ContaPoupanca(456, 654);
         contaPoupanca.depositar(2000.0);
 
-        lista.add(contaPoupanca);
+        listaDeContas.add(contaPoupanca);
 
-        System.out.println("Tamanho atual da lista: " + lista.size());
+        System.out.println("Tamanho atual da lista: " + listaDeContas.size());
 
-        Conta ref = lista.get(0);
+        Conta ref = listaDeContas.get(0);
         System.out.println(ref);
 
-        lista.remove(1);
+        listaDeContas.remove(1);
 
-        System.out.println("Tamanho atual da lista: " + lista.size());
+        System.out.println("Tamanho atual da lista: " + listaDeContas.size());
 
-        lista.add(contaPoupanca);
+        listaDeContas.add(contaPoupanca);
 
         System.out.println("-----");
 
-        for (Object obj : lista) {
+        for (Object obj : listaDeContas) {
             System.out.println(obj);
         }
 
