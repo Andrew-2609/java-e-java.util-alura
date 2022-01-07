@@ -1,0 +1,6 @@
+# IntelliJ IDEA
+.idea/
+java-e-java.util-alura.iml
+
+# Generated files
+out/
