@@ -40,7 +40,11 @@ class ComparadorDeContas implements Comparator<Conta> {
 
     @Override
     public int compare(Conta primeiraConta, Conta segundaConta) {
-        return 0;
+        if (primeiraConta.getAgencia() == segundaConta.getAgencia()) {
+            return 0;
+        }
+
+        return primeiraConta.getAgencia() < segundaConta.getAgencia() ? -1 : 1;
     }
 
 }
