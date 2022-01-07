@@ -2,37 +2,22 @@ package com.ndrewcoding.lessons.util;
 
 import models.Conta;
 import models.ContaCorrente;
-import models.ContaPoupanca;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class TesteJavaUtilLinkedList {
     public static void main(String[] args) {
 
-        ArrayList<Conta> listaDeContas = new ArrayList<>();
+        List<Conta> listaDeContas = new LinkedList<>();
 
-        ContaCorrente contaCorrente = new ContaCorrente(123, 321);
-        contaCorrente.depositar(1000.0);
+        ContaCorrente cc1 = new ContaCorrente(123, 323);
+        ContaCorrente cc2 = new ContaCorrente(123, 323);
 
-        listaDeContas.add(contaCorrente);
+        listaDeContas.add(cc1);
+        listaDeContas.add(cc2);
 
-        ContaPoupanca contaPoupanca = new ContaPoupanca(456, 654);
-        contaPoupanca.depositar(2000.0);
-
-        listaDeContas.add(contaPoupanca);
-
-        System.out.println("Tamanho atual da lista: " + listaDeContas.size());
-
-        Conta ref = listaDeContas.get(0);
-        System.out.println(ref);
-
-        listaDeContas.remove(1);
-
-        System.out.println("Tamanho atual da lista: " + listaDeContas.size());
-
-        listaDeContas.add(contaPoupanca);
-
-        System.out.println("-----");
+        listaDeContas.remove(0);
 
         for (Conta conta : listaDeContas) {
             System.out.println(conta);
