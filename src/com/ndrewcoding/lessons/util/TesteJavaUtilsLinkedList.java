@@ -6,7 +6,7 @@ import models.ContaCorrente;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TesteJavaUtilLinkedList {
+public class TesteJavaUtilsLinkedList {
     public static void main(String[] args) {
 
         List<Conta> listaDeContas = new LinkedList<>();

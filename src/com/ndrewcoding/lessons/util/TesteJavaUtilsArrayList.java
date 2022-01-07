@@ -6,7 +6,7 @@ import models.ContaPoupanca;
 
 import java.util.ArrayList;
 
-public class TesteJavaUtilArrayList {
+public class TesteJavaUtilsArrayList {
     public static void main(String[] args) {
 
         ArrayList<Conta> listaDeContas = new ArrayList<>();

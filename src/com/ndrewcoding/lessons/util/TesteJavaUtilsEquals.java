@@ -5,7 +5,7 @@ import models.ContaCorrente;
 
 import java.util.ArrayList;
 
-public class TesteJavaUtilEquals {
+public class TesteJavaUtilsEquals {
     public static void main(String[] args) {
 
         ArrayList<Conta> listaDeContas = new ArrayList<>(2);
