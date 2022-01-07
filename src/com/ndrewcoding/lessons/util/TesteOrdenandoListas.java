@@ -11,10 +11,10 @@ import java.util.List;
 public class TesteOrdenandoListas {
     public static void main(String[] args) {
 
-        Conta cc1 = new ContaCorrente(22, 33);
+        Conta cc1 = new ContaCorrente(24, 33);
         cc1.depositar(333.0);
 
-        Conta cc2 = new ContaPoupanca(22, 44);
+        Conta cc2 = new ContaPoupanca(23, 44);
         cc2.depositar(444.0);
 
         Conta cc3 = new ContaCorrente(22, 11);
@@ -28,6 +28,14 @@ public class TesteOrdenandoListas {
         listaDeContas.add(cc2);
         listaDeContas.add(cc3);
         listaDeContas.add(cc4);
+
+        for (Conta conta : listaDeContas) {
+            System.out.println(conta);
+        }
+
+        System.out.println("----- Após ordenação das contas por *agência* -----");
+
+        listaDeContas.sort(new ComparadorDeContas());
 
         for (Conta conta : listaDeContas) {
             System.out.println(conta);
