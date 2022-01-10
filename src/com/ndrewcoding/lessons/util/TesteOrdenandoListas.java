@@ -44,6 +44,18 @@ public class TesteOrdenandoListas {
     }
 }
 
+class ComparadorDeContasPorTitular implements Comparator<Conta> {
+
+    @Override
+    public int compare(Conta primeiraConta, Conta segundaConta) {
+        String primeiroTitular = primeiraConta.getTitular().getNome();
+        String segundoTitular = segundaConta.getTitular().getNome();
+
+        return primeiroTitular.compareTo(segundoTitular);
+    }
+
+}
+
 class ComparadorDeContasPorAgencia implements Comparator<Conta> {
 
     @Override
