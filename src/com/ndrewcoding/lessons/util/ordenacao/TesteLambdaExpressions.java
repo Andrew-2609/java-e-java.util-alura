@@ -25,25 +25,19 @@ public class TesteLambdaExpressions {
         listaDeContas.add(cc2);
         listaDeContas.add(cc3);
 
-        for (Conta conta : listaDeContas) {
-            System.out.println(conta);
-        }
+        listaDeContas.forEach((conta) -> System.out.println(conta));
 
         System.out.println("\n----- Após ordenação das contas por *saldo* -----\n");
 
         listaDeContas.sort((x1, x2) -> Double.compare(x1.getSaldo(), x2.getSaldo()));
 
-        for (Conta conta : listaDeContas) {
-            System.out.println(conta);
-        }
+        listaDeContas.forEach((conta) -> System.out.println(conta));
 
         System.out.println("\n----- Após ordenação das contas por *agencia* -----\n");
 
         listaDeContas.sort((x1, x2) -> Integer.compare(x1.getAgencia(), x2.getAgencia()));
 
-        for (Conta conta : listaDeContas) {
-            System.out.println(conta);
-        }
+        listaDeContas.forEach((conta) -> System.out.println(conta));
 
     }
 }
