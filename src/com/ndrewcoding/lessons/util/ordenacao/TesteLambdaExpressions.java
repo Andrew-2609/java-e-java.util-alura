@@ -5,9 +5,10 @@ import models.ContaCorrente;
 import models.ContaPoupanca;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-@SuppressWarnings({"DuplicatedCode", "ComparatorCombinators"})
+@SuppressWarnings({"DuplicatedCode"})
 public class TesteLambdaExpressions {
     public static void main(String[] args) {
 
@@ -25,19 +26,19 @@ public class TesteLambdaExpressions {
         listaDeContas.add(cc2);
         listaDeContas.add(cc3);
 
-        listaDeContas.forEach((conta) -> System.out.println(conta));
+        listaDeContas.forEach(System.out::println);
 
         System.out.println("\n----- Após ordenação das contas por *saldo* -----\n");
 
-        listaDeContas.sort((x1, x2) -> Double.compare(x1.getSaldo(), x2.getSaldo()));
+        listaDeContas.sort(Comparator.comparingDouble(Conta::getSaldo));
 
-        listaDeContas.forEach((conta) -> System.out.println(conta));
+        listaDeContas.forEach(System.out::println);
 
         System.out.println("\n----- Após ordenação das contas por *agencia* -----\n");
 
-        listaDeContas.sort((x1, x2) -> Integer.compare(x1.getAgencia(), x2.getAgencia()));
+        listaDeContas.sort(Comparator.comparingInt(Conta::getAgencia));
 
-        listaDeContas.forEach((conta) -> System.out.println(conta));
+        listaDeContas.forEach(System.out::println);
 
     }
 }
