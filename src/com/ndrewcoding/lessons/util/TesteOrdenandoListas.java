@@ -35,7 +35,7 @@ public class TesteOrdenandoListas {
 
         System.out.println("----- Após ordenação das contas por *agência* -----");
 
-        listaDeContas.sort(new ComparadorDeContas());
+        listaDeContas.sort(new ComparadorDeContasPorAgencia());
 
         for (Conta conta : listaDeContas) {
             System.out.println(conta);
@@ -44,7 +44,7 @@ public class TesteOrdenandoListas {
     }
 }
 
-class ComparadorDeContas implements Comparator<Conta> {
+class ComparadorDeContasPorAgencia implements Comparator<Conta> {
 
     @Override
     public int compare(Conta primeiraConta, Conta segundaConta) {
