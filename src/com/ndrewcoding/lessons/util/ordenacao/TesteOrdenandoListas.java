@@ -1,4 +1,4 @@
-package com.ndrewcoding.lessons.util;
+package com.ndrewcoding.lessons.util.ordenacao;
 
 import models.Cliente;
 import models.Conta;
