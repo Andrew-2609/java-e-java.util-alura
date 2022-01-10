@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-@SuppressWarnings({"DuplicatedCode"})
 public class TesteLambdaExpressions {
     public static void main(String[] args) {
 
