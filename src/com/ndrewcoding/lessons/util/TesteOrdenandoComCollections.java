@@ -1,12 +1,11 @@
 package com.ndrewcoding.lessons.util;
 
-import models.Cliente;
 import models.Conta;
 import models.ContaCorrente;
 import models.ContaPoupanca;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 
 public class TesteOrdenandoComCollections {
@@ -26,9 +25,13 @@ public class TesteOrdenandoComCollections {
         listaDeContas.add(cc2);
         listaDeContas.add(cc3);
 
+        for (Conta conta : listaDeContas) {
+            System.out.println(conta);
+        }
+
         System.out.println("\n----- Após ordenação das contas por saldo (padrão) -----\n");
 
-        //
+        Collections.sort(listaDeContas);
 
         for (Conta conta : listaDeContas) {
             System.out.println(conta);
