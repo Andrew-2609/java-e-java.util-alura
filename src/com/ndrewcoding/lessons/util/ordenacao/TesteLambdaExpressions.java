@@ -7,7 +7,7 @@ import models.ContaPoupanca;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("DuplicatedCode")
+@SuppressWarnings({"DuplicatedCode", "ComparatorCombinators"})
 public class TesteLambdaExpressions {
     public static void main(String[] args) {
 
@@ -31,7 +31,7 @@ public class TesteLambdaExpressions {
 
         System.out.println("\n----- Após ordenação das contas por *saldo* -----\n");
 
-        //
+        listaDeContas.sort((x1, x2) -> Double.compare(x1.getSaldo(), x2.getSaldo()));
 
         for (Conta conta : listaDeContas) {
             System.out.println(conta);
@@ -39,7 +39,7 @@ public class TesteLambdaExpressions {
 
         System.out.println("\n----- Após ordenação das contas por *agencia* -----\n");
 
-        //
+        listaDeContas.sort((x1, x2) -> Integer.compare(x1.getAgencia(), x2.getAgencia()));
 
         for (Conta conta : listaDeContas) {
             System.out.println(conta);
